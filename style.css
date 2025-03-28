@@ -1,6 +1,10 @@
 *{
     text-align: center;
 }
+body{
+    height: 100vh;
+    background: linear-gradient(135deg, #FF00FF, #00FFFF);
+}
 .btn{
     width: 150px;
     height: 150px;
@@ -11,18 +15,22 @@
 .btn-Container{
     display: flex;
     justify-content: center;
+    border: 3px solid #0e1111;
+    border-radius: 10px;
+    width: 400px;
+    margin: 0 auto;
 }
 .yellow{
-    background-color: #f99b45;
+    background-color: #FFF9B0;
 }
 .green{
-    background-color: #63aac0;
+    background-color: #A8E6CF;
 }
 .red{
-    background-color: #d95098;
+    background-color: #FF8B94;
 }
 .purple{
-    background-color: #819ff9;
+    background-color: #8ED1FC;
 }
 .userflash{
     background-color: whitesmoke;
