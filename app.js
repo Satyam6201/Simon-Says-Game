@@ -12,7 +12,6 @@ let btns = ["yellow", "green", "red", "purple"];
 let level = 0;
 let started = false;
 
-// Toggle dark/light mode
 modeToggle.addEventListener("click", () => {
     body.classList.toggle("dark");
 });
@@ -69,7 +68,6 @@ function checkAns(index) {
     }
 }
 
-// Game Over logic
 function gameOver() {
     h3.innerText = `Game Over! You reached Level ${level}. Press any key to restart.`;
     body.classList.add("game-over");
@@ -82,7 +80,6 @@ function gameOver() {
     resetGame();
 }
 
-// Reset game state
 function resetGame() {
     started = false;
     gameseq = [];
