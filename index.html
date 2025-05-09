@@ -10,21 +10,25 @@
 <body>
     <div class="container">
         <h1>Simon Says Game</h1>
-        <h3>Press Any Key To Start The Game</h3>
-        <div id="mode-toggle">🌙 Dark Mode</div>
+        <h3>Press any key to start</h3>
+
+        <button id="mode-toggle">Toggle Dark/Light Mode</button>
+        <div id="scoreBox">Current Level: 0</div>
+
         <div class="btn-Container">
             <div class="first-line">
-                <div class="btn red" id="red">1</div>
-                <div class="btn yellow" id="yellow">2</div>
+                <div class="btn red" id="red">Red</div>
+                <div class="btn yellow" id="yellow">Yellow</div>
             </div>
             <div class="second-line">
-                <div class="btn green" id="green">3</div>
-                <div class="btn purple" id="purple">4</div>
+                <div class="btn green" id="green">Green</div>
+                <div class="btn purple" id="purple">Purple</div>
             </div>
         </div>
-        <button id="restartBtn">Restart</button>
-        <h1>About The Game <a href="https://youtu.be/EWJ5uYwQJGU?si=W2JekO3n9-bAkay9" target="_blank">Simon Game</a></h1>
+
+        <button id="restartBtn">Restart Game</button>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>
