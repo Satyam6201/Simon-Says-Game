@@ -90,7 +90,6 @@ function resetGame() {
     level = 0;
 }
 
-// Button clicks
 let allBtns = document.querySelectorAll(".btn");
 allBtns.forEach(btn => {
     btn.addEventListener("click", () => {
@@ -101,7 +100,6 @@ allBtns.forEach(btn => {
     });
 });
 
-// Restart Button (optional)
 restartBtn.addEventListener("click", () => {
     if (!started) {
         started = true;
