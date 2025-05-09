@@ -1,11 +1,9 @@
-// Select elements
 const modeToggle = document.getElementById("mode-toggle");
 const body = document.body;
 const h3 = document.querySelector("h3");
 const scoreBox = document.getElementById("scoreBox");
 const restartBtn = document.getElementById("restartBtn");
 
-// Game variables
 let gameseq = [];
 let userseq = [];
 let btns = ["yellow", "green", "red", "purple"];
