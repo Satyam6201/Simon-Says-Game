@@ -7,7 +7,6 @@ A classic **Simon Says memory game** built using **HTML**, **CSS**, and **JavaSc
 ## 🧠 Features
 
 - 🎨 Clean and responsive UI
-- 🔊 Sound effects for each button
 - 🧩 Pattern-based memory challenge
 - 🕹️ Smooth animations and transitions
 - ⏱️ Increasing difficulty with each level
