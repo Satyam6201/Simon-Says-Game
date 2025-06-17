@@ -36,3 +36,4 @@ simon-says-game/
 ├── style.css
 ├── script.js
 └── images
+```
