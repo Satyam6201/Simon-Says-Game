@@ -11,50 +11,80 @@
   <div class="container">
     <header>
       <h1>Simon Says Game</h1>
-      <h3 id="status">Press Any Key or Start Button to Begin</h3>
-      <div class="controls">
-        <button id="mode-toggle">Toggle Dark/Light Mode</button>
-        <button id="audio-toggle">🔊 Sound On</button>
+      <h3 id="status">Press Any Key or Start to Begin</h3>
+
+      <div class="top-controls">
+        <button id="startBtn">Start Game</button>
+        <button id="pauseBtn">⏸️ Pause</button>
+        <button id="resumeBtn" class="hidden">▶️ Resume</button>
+        <button id="restartBtn">🔁 Restart</button>
       </div>
+
+      <div class="game-settings">
+        <label for="difficulty">Mode:</label>
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium" selected>Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+
+        <label for="theme">Theme:</label>
+        <select id="themeSelector">
+          <option value="default">Default</option>
+          <option value="neon">Neon</option>
+          <option value="pastel">Pastel</option>
+        </select>
+
+        <label for="colorblindToggle">
+          <input type="checkbox" id="colorblindToggle" />
+          Colorblind Mode
+        </label>
+      </div>
+
+      <div class="controls">
+        <button id="mode-toggle">🌙 Theme Mode</button>
+        <button id="audio-toggle">🔊 Sound</button>
+      </div>
+
       <div class="scoreboard">
-        <div id="scoreBox">Current Level: 0</div>
+        <div id="scoreBox">Level: 0</div>
         <div id="highScoreBox">High Score: 0</div>
+        <div id="timerBox">⏱️ Time Left: <span id="timer">--</span></div>
+        <div id="progressContainer">
+          <label for="levelProgress">Progress:</label>
+          <progress id="levelProgress" value="0" max="100"></progress>
+        </div>
       </div>
     </header>
 
     <main>
-      <div class="btn-Container">
+      <div class="btn-Container" role="region" aria-label="Game Buttons">
         <div class="first-line">
-          <div class="btn red" id="red">Red</div>
-          <div class="btn yellow" id="yellow">Yellow</div>
+          <button class="btn red" id="red" aria-label="Red button"></button>
+          <button class="btn yellow" id="yellow" aria-label="Yellow button"></button>
         </div>
         <div class="second-line">
-          <div class="btn green" id="green">Green</div>
-          <div class="btn purple" id="purple">Purple</div>
+          <button class="btn green" id="green" aria-label="Green button"></button>
+          <button class="btn purple" id="purple" aria-label="Purple button"></button>
         </div>
       </div>
 
-      <div class="game-buttons">
-        <button id="startBtn">Start Game</button>
-        <button id="restartBtn">Restart Game</button>
-      </div>
-
-      <h3 id="winMessage" class="hidden">🎉 Congratulations! You Beat the Game! 🎉</h3>
+      <h3 id="winMessage" class="hidden">🎉 You Completed All Levels! 🎉</h3>
     </main>
 
     <footer>
-      <p>Made with ❤️ by Satyam | <a href="https://github.com/Satyam6201" target="_blank">GitHub</a></p>
+      <p>Made with ❤️ by <a href="https://github.com/Satyam6201" target="_blank">Satyam</a></p>
     </footer>
   </div>
 
-  <!-- Modal for Game Instructions -->
-  <!-- <div id="instructionsModal" class="modal hidden">
+  <!-- Instructions Modal -->
+  <div id="instructionsModal" class="modal hidden">
     <div class="modal-content">
       <h2>📘 How to Play</h2>
-      <p>Watch the color sequence and repeat it by clicking the buttons in the same order. Each new level adds one more color. One mistake ends the game. Try to beat your high score!</p>
+      <p>Repeat the color pattern shown. Each level adds one more color. Make a mistake, and the game ends. Try to beat your high score!</p>
       <button id="closeModal">Close</button>
     </div>
-  </div> -->
+  </div>
 
   <!-- JavaScript -->
   <script src="app.js"></script>
