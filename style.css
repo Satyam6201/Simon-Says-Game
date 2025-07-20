@@ -1,150 +1,257 @@
+/* ---------- Base Reset ---------- */
 * {
-    box-sizing: border-box;
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* ---------- Body Styles ---------- */
 body {
-    height: 100vh;
-    background: linear-gradient(135deg, #FF00FF, #00FFFF);
-    transition: background 0.4s ease, color 0.4s ease;
-    color: #111;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FF00FF, #00FFFF);
+  color: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transition: background 0.4s ease, color 0.4s ease;
 }
-
 body.dark {
-    background: linear-gradient(135deg, #121212, #2c2c2c);
-    color: #f5f5f5;
+  background: linear-gradient(135deg, #121212, #2c2c2c);
+  color: #f5f5f5;
 }
 
+/* ---------- Container ---------- */
+.container {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* ---------- Header ---------- */
 h1 {
-    font-size: 3rem;
-    margin-top: 1rem;
-    animation: fadeIn 1s ease-in;
+  font-size: 3rem;
+  margin: 1rem 0;
+  animation: fadeIn 1s ease-in;
 }
-h3 {
-    margin: 1rem 0;
-    font-weight: 500;
+#status {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
 
+/* ---------- Controls ---------- */
+.controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 #mode-toggle {
-    margin: 1rem auto;
-    cursor: pointer;
-    padding: 0.6rem 1.2rem;
-    background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 12px;
-    font-size: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s, color 0.3s;
+  background: #333;
+  color: white;
+}
+#mode-toggle:hover {
+  background: #555;
 }
 body.dark #mode-toggle {
-    background: #ddd;
-    color: #111;
+  background: #ddd;
+  color: #111;
+}
+#audio-toggle {
+  background: #007BFF;
+  color: white;
+}
+#audio-toggle:hover {
+  background: #0056b3;
 }
 
+/* ---------- Scoreboard ---------- */
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+#scoreBox, #highScoreBox {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+body.dark #highScoreBox,
+body.dark #scoreBox {
+  color: #fff;
+}
+
+/* ---------- Button Grid ---------- */
 .btn-Container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid black;
-    border-radius: 15px;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(6px);
-    margin: 2rem auto;
-    width: 80%;
-    max-width: 400px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
-
 .first-line, .second-line {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
-
 .btn {
-    width: 120px;
-    height: 120px;
-    margin: 1rem;
-    border-radius: 18px;
-    border: 5px solid black;
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  border: 5px solid black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
 }
 .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.red { background-color: #FF6B6B; }
+/* ---------- Button Colors ---------- */
+.red    { background-color: #FF6B6B; }
 .yellow { background-color: #FFF176; }
-.green { background-color: #81C784; }
+.green  { background-color: #81C784; }
 .purple { background-color: #BA68C8; }
 
+/* ---------- Button Flash Effects ---------- */
 .flash {
-    transform: scale(1.15);
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
 }
 .userflash {
-    opacity: 0.6;
-    filter: brightness(120%);
+  opacity: 0.6;
+  filter: brightness(120%);
 }
 
+/* ---------- Game Buttons ---------- */
+.game-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+#startBtn {
+  background-color: #28a745;
+  color: white;
+}
+#startBtn:hover {
+  background-color: #218838;
+}
 #restartBtn {
-    padding: 0.7rem 1.5rem;
-    margin-top: 1.5rem;
-    background-color: #222;
-    color: #fff;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s ease;
+  background-color: #dc3545;
+  color: white;
 }
 #restartBtn:hover {
-    background-color: #444;
+  background-color: #c82333;
 }
 
-a {
-    color: #007BFF;
-    text-decoration: none;
+/* ---------- Win Message ---------- */
+#winMessage {
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: #28a745;
+  animation: pulse 1.2s infinite;
 }
-a:hover {
-    text-decoration: underline;
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+.hidden {
+  display: none;
 }
 
-#scoreBox {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
+/* ---------- Modal ---------- */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: center;
+}
+.modal-content h2 {
+  margin-bottom: 1rem;
+}
+.modal-content p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+#closeModal {
+  padding: 0.5rem 1.2rem;
+  background-color: #007BFF;
+  color: white;
+}
+#closeModal:hover {
+  background-color: #0056b3;
 }
 
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+footer a {
+  color: #007BFF;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Animations ---------- */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
+/* ---------- Responsive Design ---------- */
 @media (max-width: 600px) {
-    .btn {
-        width: 80px;
-        height: 80px;
-        font-size: 1rem;
-    }
-    .btn-Container {
-        width: 90%;
-    }
-    h1 {
-        font-size: 2rem;
-    }
+  .btn {
+    width: 80px;
+    height: 80px;
+    font-size: 1rem;
+  }
+  .btn-Container {
+    width: 90%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .scoreboard {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
