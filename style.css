@@ -1,246 +1,257 @@
-/* Base styles */
+/* ---------- Base Reset ---------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
+/* ---------- Body Styles ---------- */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--background, #1e1e2f);
-  color: var(--text, #ffffff);
   min-height: 100vh;
+  background: linear-gradient(135deg, #FF00FF, #00FFFF);
+  color: #111;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: 2rem;
+  justify-content: center;
+  padding: 1rem;
+  transition: background 0.4s ease, color 0.4s ease;
+}
+body.dark {
+  background: linear-gradient(135deg, #121212, #2c2c2c);
+  color: #f5f5f5;
 }
 
+/* ---------- Container ---------- */
 .container {
-  max-width: 900px;
   width: 100%;
+  max-width: 700px;
   text-align: center;
 }
 
-header h1 {
+/* ---------- Header ---------- */
+h1 {
   font-size: 3rem;
-  margin-bottom: 0.5rem;
-  color: #00d1b2;
-}
-
-header h3 {
-  margin-bottom: 1.5rem;
-  font-weight: 400;
-  font-size: 1.2rem;
-  color: #ccc;
-}
-
-.top-controls,
-.game-settings,
-.controls,
-.scoreboard {
   margin: 1rem 0;
+  animation: fadeIn 1s ease-in;
+}
+#status {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* ---------- Controls ---------- */
+.controls {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-button,
-select {
-  background: #00d1b2;
-  color: #fff;
-  border: none;
+button {
   padding: 0.6rem 1.2rem;
-  border-radius: 8px;
   font-size: 1rem;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+}
+#mode-toggle {
+  background: #333;
+  color: white;
+}
+#mode-toggle:hover {
+  background: #555;
+}
+body.dark #mode-toggle {
+  background: #ddd;
+  color: #111;
+}
+#audio-toggle {
+  background: #007BFF;
+  color: white;
+}
+#audio-toggle:hover {
+  background: #0056b3;
 }
 
-button:hover,
-select:hover {
-  background: #00b89c;
+/* ---------- Scoreboard ---------- */
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
 }
-
-select {
-  background: #2e2e48;
-  border: 1px solid #555;
+#scoreBox, #highScoreBox {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+body.dark #highScoreBox,
+body.dark #scoreBox {
   color: #fff;
 }
 
-.hidden {
-  display: none !important;
+/* ---------- Button Grid ---------- */
+.btn-Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
-
-.btn-container {
-  display: grid;
-  grid-template-columns: repeat(2, 140px);
-  grid-gap: 1rem;
+.first-line, .second-line {
+  display: flex;
   justify-content: center;
-  margin: 2rem 0;
+  gap: 1rem;
 }
-
 .btn {
-  width: 140px;
-  height: 140px;
-  border: none;
-  border-radius: 16px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  border: 5px solid black;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
-  transition: transform 0.2s, filter 0.3s;
+}
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.btn:active {
-  transform: scale(0.95);
+/* ---------- Button Colors ---------- */
+.red    { background-color: #FF6B6B; }
+.yellow { background-color: #FFF176; }
+.green  { background-color: #81C784; }
+.purple { background-color: #BA68C8; }
+
+/* ---------- Button Flash Effects ---------- */
+.flash {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.7);
+}
+.userflash {
+  opacity: 0.6;
+  filter: brightness(120%);
 }
 
-.red { background: #ff4c4c; }
-.yellow { background: #fed93f; }
-.green { background: #13ff7c; }
-.purple { background: #9d4edd; }
-
-footer {
-  margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #aaa;
+/* ---------- Game Buttons ---------- */
+.game-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+#startBtn {
+  background-color: #28a745;
+  color: white;
+}
+#startBtn:hover {
+  background-color: #218838;
+}
+#restartBtn {
+  background-color: #dc3545;
+  color: white;
+}
+#restartBtn:hover {
+  background-color: #c82333;
 }
 
-footer a {
-  color: #00d1b2;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
+/* ---------- Win Message ---------- */
 #winMessage {
-  font-size: 1.5rem;
-  color: #ffd700;
-  animation: pulse 1s infinite;
+  margin-top: 1.5rem;
+  font-size: 1.3rem;
+  color: #28a745;
+  animation: pulse 1.2s infinite;
 }
-
 @keyframes pulse {
   0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
+  50% { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
+.hidden {
+  display: none;
+}
 
+/* ---------- Modal ---------- */
 .modal {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 10;
 }
-
 .modal-content {
-  background: #2e2e48;
-  color: #fff;
+  background: white;
   padding: 2rem;
-  border-radius: 10px;
-  width: 90%;
+  border-radius: 12px;
   max-width: 500px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  position: relative;
+  text-align: center;
+}
+.modal-content h2 {
+  margin-bottom: 1rem;
+}
+.modal-content p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+#closeModal {
+  padding: 0.5rem 1.2rem;
+  background-color: #007BFF;
+  color: white;
+}
+#closeModal:hover {
+  background-color: #0056b3;
 }
 
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #fff;
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+footer a {
+  color: #007BFF;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
-#progressContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  width: 100%;
-  max-width: 300px;
-  margin: 0 auto;
+/* ---------- Animations ---------- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-progress {
-  width: 100%;
-  height: 20px;
-  appearance: none;
-  background: #333;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-progress::-webkit-progress-bar {
-  background: #333;
-}
-
-progress::-webkit-progress-value {
-  background: #00d1b2;
-}
-
-progress::-moz-progress-bar {
-  background: #00d1b2;
-}
-
-#levelDisplay {
-  font-size: 1.2rem;
-  color: #ffeb3b;
-  margin: 1rem 0;
-}
-
-#audioToggle {
-  background: #444;
-  color: #fff;
-  padding: 0.4rem 1rem;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-}
-
-#audioToggle.active {
-  background: #00d1b2;
-}
-
+/* ---------- Responsive Design ---------- */
 @media (max-width: 600px) {
-  .btn-container {
-    grid-template-columns: repeat(2, 90px);
-    grid-gap: 0.7rem;
-  }
-
   .btn {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
+    font-size: 1rem;
   }
-
-  button,
-  select {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
+  .btn-Container {
+    width: 90%;
   }
-}
-
-/* Themes */
-body.neon {
-  --background: #0f0f0f;
-  --text: #39ff14;
-}
-
-body.pastel {
-  --background: #fdf6f0;
-  --text: #333;
-}
-
-body.default {
-  --background: #1e1e2f;
-  --text: #ffffff;
+  h1 {
+    font-size: 2rem;
+  }
+  .scoreboard {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
