@@ -24,4 +24,12 @@
 
 ## 📂 Project Structure
 
+```
+Simon-Says-Game/
+├── index.html # Main HTML structure
+├── style.css # All custom styles and responsive design
+├── app.js # Core game logic and interactivity
+├── assets/ (optional) # Images or additional UI assets
+└── README.md # Project overview
+```
 
