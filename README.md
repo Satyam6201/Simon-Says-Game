@@ -33,3 +33,49 @@ Simon-Says-Game/
 └── README.md # Project overview
 ```
 
+
+---
+
+## 🖥️ Tech Stack
+
+- **HTML5**
+- **CSS3**
+- **Vanilla JavaScript (ES6+)**
+- **Vercel** – for live deployment
+
+---
+
+## 🎯 How to Play
+
+1. Click the **Start** button or press `Enter`.
+2. Watch the glowing sequence of colors.
+3. Click the colors in the **same order**.
+4. Complete all **10 levels** to win.
+5. Click **Stop** or refresh to restart.
+
+---
+
+## 📸 Screenshots
+
+| Desktop View | Mobile View |
+|--------------|-------------|
+| ![Desktop](https://user-images.githubusercontent.com/your-image1) | ![Mobile](https://user-images.githubusercontent.com/your-image2) |
+
+> *(Replace with your actual screenshot URLs if available)*
+
+---
+
+## 📬 Connect with Me
+
+**Satyam Kumar Mishra**  
+🌐 [LinkedIn](https://www.linkedin.com/in/satyam-kumar-mishra-9bb980291/)  
+💻 [GitHub](https://github.com/Satyam6201)
+
+---
+
+## 📝 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
