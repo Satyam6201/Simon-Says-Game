@@ -57,14 +57,9 @@ Simon-Says-Game/
 
 ## 📸 Screenshots
 
-| Desktop View | Mobile View |
-|--------------|-------------|
-| ![Desktop](https://user-images.githubusercontent.com/your-image1) | ![Mobile](https://user-images.githubusercontent.com/your-image2) |
-
-> *(Replace with your actual screenshot URLs if available)*
-> <img width="656" height="808" alt="Screenshot 2025-07-20 225110" src="https://github.com/user-attachments/assets/108b844b-d67b-4b47-b088-4f89d499e2e1" />
-<img width="791" height="871" alt="Screenshot 2025-07-20 225301" src="https://github.com/user-attachments/assets/ff4de14f-3898-4979-a6b0-f07194f1bad2" />
-
+| 💻 Desktop View | 📱 Mobile View |
+|----------------|----------------|
+| <img width="656" height="808" alt="Desktop Screenshot" src="https://github.com/user-attachments/assets/108b844b-d67b-4b47-b088-4f89d499e2e1" /> | <img width="791" height="871" alt="Mobile Screenshot" src="https://github.com/user-attachments/assets/ff4de14f-3898-4979-a6b0-f07194f1bad2" /> |
 
 
 ---
