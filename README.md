@@ -1,39 +1,27 @@
-# 🎮 Simon Says Game
+# 🎮 Simon Says Game – Enhanced Edition
 
-A classic **Simon Says memory game** built using **HTML**, **CSS**, and **JavaScript**. Test your memory and reflexes by repeating the sequence of lights and sounds. With every correct turn, the sequence gets longer and more challenging!
+> A modern, responsive, and interactive version of the classic **Simon Says Game** built using **HTML, CSS, and JavaScript**. Test your memory as the color pattern grows with each level!
 
----
-
-## 🧠 Features
-
-- 🎨 Clean and responsive UI
-- 🧩 Pattern-based memory challenge
-- 🕹️ Smooth animations and transitions
-- ⏱️ Increasing difficulty with each level
-- 💥 Game over indication with reset functionality
+🔗 **Live Demo:** [simon-says-game-advance.vercel.app](https://simon-says-game-advance.vercel.app/)  
+📁 **GitHub Repo:** [github.com/Satyam6201/Simon-Says-Game](https://github.com/Satyam6201/Simon-Says-Game)
 
 ---
 
-## 🛠️ Technologies Used
+## 🚀 Features
 
-- **HTML5** – Structure of the game
-- **CSS3** – Styling and responsiveness
-- **JavaScript (Vanilla)** – Game logic, event handling, and interactivity
-
----
-
-## 📸 Screenshots
-![image](https://github.com/user-attachments/assets/e46a51f0-a419-4fdc-af9f-3aeefa95924f)
-![image](https://github.com/user-attachments/assets/fee8be87-bc1a-4e67-bd1e-6e74bc2d8de3)
+- 🎮 **Classic Simon Gameplay** – Remember and repeat color sequences.
+- 🧠 **Level Tracking** – Increases difficulty as you progress.
+- 🔊 **Audio Feedback** – Play sounds for each color (with toggle).
+- 📶 **Progress Bar** – Tracks your current level visually.
+- 💡 **Glowing Button Animations** – Enhanced visual cues and feedback.
+- 🎉 **Victory Animation** – Special win message on Level 10.
+- ❌ **Wrong Click Handling** – Shows modal with restart option.
+- 🔇 **Audio Toggle** – Turn game sounds on or off.
+- 📱 **Fully Responsive** – Works great on mobile and desktop.
+- 🌓 **Dark/Light Theme Support** *(optional for future enhancement)*
 
 ---
 
 ## 📂 Project Structure
 
-```bash
-simon-says-game/
-├── index.html
-├── style.css
-├── script.js
-└── images
-```
+
