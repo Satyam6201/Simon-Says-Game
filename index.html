@@ -1,34 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simon Says Game</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="/Simon_Game/image/Simon_Electronic_Game.jpg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simon Says Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="/Simon_Game/image/Simon_Electronic_Game.jpg" />
 </head>
 <body>
-    <div class="container">
-        <h1>Simon Says Game</h1>
-        <h3>Press any key to start</h3>
-
+  <div class="container">
+    <header>
+      <h1>Simon Says Game</h1>
+      <h3 id="status">Press Any Key or Start Button to Begin</h3>
+      <div class="controls">
         <button id="mode-toggle">Toggle Dark/Light Mode</button>
+        <button id="audio-toggle">🔊 Sound On</button>
+      </div>
+      <div class="scoreboard">
         <div id="scoreBox">Current Level: 0</div>
+        <div id="highScoreBox">High Score: 0</div>
+      </div>
+    </header>
 
-        <div class="btn-Container">
-            <div class="first-line">
-                <div class="btn red" id="red">Red</div>
-                <div class="btn yellow" id="yellow">Yellow</div>
-            </div>
-            <div class="second-line">
-                <div class="btn green" id="green">Green</div>
-                <div class="btn purple" id="purple">Purple</div>
-            </div>
+    <main>
+      <div class="btn-Container">
+        <div class="first-line">
+          <div class="btn red" id="red">Red</div>
+          <div class="btn yellow" id="yellow">Yellow</div>
         </div>
+        <div class="second-line">
+          <div class="btn green" id="green">Green</div>
+          <div class="btn purple" id="purple">Purple</div>
+        </div>
+      </div>
 
+      <div class="game-buttons">
+        <button id="startBtn">Start Game</button>
         <button id="restartBtn">Restart Game</button>
-    </div>
+      </div>
 
-    <script src="app.js"></script>
+      <h3 id="winMessage" class="hidden">🎉 Congratulations! You Beat the Game! 🎉</h3>
+    </main>
+
+    <footer>
+      <p>Made with ❤️ by Satyam | <a href="https://github.com/Satyam6201" target="_blank">GitHub</a></p>
+    </footer>
+  </div>
+
+  <!-- Modal for Game Instructions -->
+  <div id="instructionsModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>📘 How to Play</h2>
+      <p>Watch the color sequence and repeat it by clicking the buttons in the same order. Each new level adds one more color. One mistake ends the game. Try to beat your high score!</p>
+      <button id="closeModal">Close</button>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
 </body>
 </html>
