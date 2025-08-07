@@ -64,7 +64,6 @@ Simon-Says-Game/
 |----------------|----------------|
 | <img width="656" height="808" alt="Desktop Screenshot" src="https://github.com/user-attachments/assets/108b844b-d67b-4b47-b088-4f89d499e2e1" /> | <img width="791" height="871" alt="Mobile Screenshot" src="https://github.com/user-attachments/assets/ff4de14f-3898-4979-a6b0-f07194f1bad2" /> |
 
-
 ---
 
 ## 📬 Connect with Me
