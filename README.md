@@ -72,5 +72,3 @@ Simon-Says-Game/
 **Satyam Kumar Mishra**  
 🌐 [LinkedIn](https://www.linkedin.com/in/satyam-kumar-mishra-9bb980291/)  
 💻 [GitHub](https://github.com/Satyam6201)
-
----
